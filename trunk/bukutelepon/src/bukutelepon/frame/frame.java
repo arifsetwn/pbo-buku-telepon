@@ -205,8 +205,12 @@ public class frame extends javax.swing.JFrame {
 
     private void btninsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninsertActionPerformed
         // TODO add your handling code here:
-       insert();
-        awal();
+        if (txtno.getText().equals("") && txtnama.getText().equals("") ) {
+            JOptionPane.showMessageDialog(null,"field No atau Nama harus diisi");
+        }else{
+
+            insert();
+            awal();}
     }//GEN-LAST:event_btninsertActionPerformed
 
 
