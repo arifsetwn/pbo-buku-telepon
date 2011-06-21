@@ -62,22 +62,23 @@ public class frame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtno = new javax.swing.JTextField();
         txtnama = new javax.swing.JTextField();
-        btninsert = new javax.swing.JButton();
-        btnedit = new javax.swing.JButton();
-        btndelete = new javax.swing.JButton();
-        btnclear = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelbukutelepon = new javax.swing.JTable();
         txtcari = new javax.swing.JTextField();
         btncari = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtalamat = new javax.swing.JTextArea();
-        btntambah = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
+        btnedit = new javax.swing.JButton();
+        btndelete = new javax.swing.JButton();
+        btnclear = new javax.swing.JButton();
+        btninsert = new javax.swing.JButton();
+        btntambah = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         cmbpilihan = new javax.swing.JComboBox();
         btnrefresh = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnabout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Buku Telepon");
@@ -93,38 +94,6 @@ public class frame extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 198, -1, -1));
         getContentPane().add(txtno, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 150, 171, -1));
         getContentPane().add(txtnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 184, 171, -1));
-
-        btninsert.setText("insert");
-        btninsert.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btninsertActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btninsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 396, 69, -1));
-
-        btnedit.setText("simpan");
-        btnedit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btneditActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnedit, new org.netbeans.lib.awtextra.AbsoluteConstraints(179, 396, -1, -1));
-
-        btndelete.setText("delete");
-        btndelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndeleteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(262, 396, -1, -1));
-
-        btnclear.setText("clear");
-        btnclear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnclearActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnclear, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 396, -1, -1));
 
         tabelbukutelepon.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -161,33 +130,74 @@ public class frame extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(146, 210, 171, -1));
 
+        btnedit.setText("simpan");
+        btnedit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btneditActionPerformed(evt);
+            }
+        });
+
+        btndelete.setText("delete");
+        btndelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndeleteActionPerformed(evt);
+            }
+        });
+
+        btnclear.setText("clear");
+        btnclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnclearActionPerformed(evt);
+            }
+        });
+
+        btninsert.setText("insert");
+        btninsert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btninsertActionPerformed(evt);
+            }
+        });
+
         btntambah.setText("tambah");
         btntambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntambahActionPerformed(evt);
             }
         });
-        getContentPane().add(btntambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 367, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 793, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btntambah)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btninsert, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnedit)
+                        .addGap(18, 18, 18)
+                        .addComponent(btndelete)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnclear)))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(btntambah)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnedit)
+                    .addComponent(btndelete)
+                    .addComponent(btnclear)
+                    .addComponent(btninsert))
+                .addGap(26, 26, 26))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, 80));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 370, 10));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, 80));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 370, 10));
 
         cmbpilihan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "nomor", "nama", "alamat" }));
         getContentPane().add(cmbpilihan, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
@@ -199,6 +209,15 @@ public class frame extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnrefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, 70, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 793, 13));
+
+        btnabout.setText("about");
+        btnabout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnaboutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnabout, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 420, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -376,6 +395,11 @@ public class frame extends javax.swing.JFrame {
         awal();
     }//GEN-LAST:event_btnrefreshActionPerformed
 
+    private void btnaboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaboutActionPerformed
+        // TODO add your handling code here:
+        new about().setVisible(true);
+    }//GEN-LAST:event_btnaboutActionPerformed
+
     private void awal(){
         txtno.setEditable(false);
         txtnama.setEditable(false);
@@ -428,6 +452,7 @@ public class frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnabout;
     private javax.swing.JButton btncari;
     private javax.swing.JButton btnclear;
     private javax.swing.JButton btndelete;
